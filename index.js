@@ -7,7 +7,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get("/redirect/:port", (ctx) => {
-  ctx.redirect(`http://localhost:${ctx.params.port}?${ctx.querystring}`);
+  ctx.redirect(`http://localhost:${ctx.params.port}`);
 });
 
 app.use(router.routes());
