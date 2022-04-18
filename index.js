@@ -12,4 +12,4 @@ router.get("/redirect/:port", (ctx) => {
 
 app.use(router.routes());
 
-app.listen(8000);
+app.listen(process.env.PORT ?? 8000);
